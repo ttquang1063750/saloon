@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.product.nguyencongduc.bookticketapplication.activities.LoginActivity">
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/_10sdp"
+                android:layout_centerInParent="true">
+
+                <LinearLayout
+                    android:id="@+id/linear_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:orientation="horizontal">
+
+                    <com.product.nguyencongduc.uiticketlibrary.TextViewDefault
+                        android:text="@string/login_text_view_user_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/_15sdp"/>
+
+                    <com.product.nguyencongduc.uiticketlibrary.EditTextDefault
+                        android:id="@+id/edt_id"
+                        android:layout_width="@dimen/_150sdp"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/_15ssp"
+                        android:layout_marginLeft="@dimen/_35sdp"
+                        android:layout_centerHorizontal="true"
+                        android:digits="0123456789qwertzuiopasdfghjklyxcvbnm_"
+                        android:lines="1"
+                        android:singleLine="true"
+                        android:maxLines="1"
+                        android:imeOptions="actionNext"
+                        />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/linear_password"
+                    android:layout_below="@+id/linear_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:orientation="horizontal">
+
+                    <com.product.nguyencongduc.uiticketlibrary.TextViewDefault
+                        android:text="@string/login_text_view_password"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/_15ssp"/>
+
+
+                    <com.product.nguyencongduc.uiticketlibrary.EditTextDefault
+                        android:id="@+id/edt_password"
+                        android:layout_width="@dimen/_150sdp"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/_15ssp"
+                        android:inputType="textPassword"
+                        android:digits="0123456789qwertzuiopasdfghjklyxcvbnm"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_centerHorizontal="true"
+                        android:lines="1"
+                        android:singleLine="true"
+                        android:maxLines="1"
+                        android:imeOptions="actionDone"
+                        />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlt_storage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/linear_password">
+
+                    <CheckBox
+                        android:id="@+id/cb_storage_user"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/_10sdp" />
+
+                    <com.product.nguyencongduc.uiticketlibrary.TextViewDefault
+                        android:layout_toRightOf="@+id/cb_storage_user"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textSize="@dimen/_12ssp"
+                        android:text="@string/login_text_view_storage_data"/>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:layout_below="@+id/rlt_storage">
+
+                    <com.product.nguyencongduc.uiticketlibrary.ButtonDefault
+                        android:id="@+id/btn_login"
+                        android:layout_below="@+id/linear_password"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:text="LOGIN"/>
+
+
+                    <com.product.nguyencongduc.uiticketlibrary.ButtonDefault
+                        android:id="@+id/btn_forget"
+                        android:layout_below="@+id/linear_password"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:text="Forget password"/>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+</RelativeLayout>

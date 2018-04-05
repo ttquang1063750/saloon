@@ -1,0 +1,206 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorbluebb"
+    tools:context="com.product.nguyencongduc.bookticketapplication.fragments.FeedFragment">
+
+
+    <!--Header background-->
+    <ImageView
+        android:id="@+id/view_header_background"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_150sdp"
+        android:src="@drawable/ic_launcher_background"
+        android:scaleType="fitXY">
+
+    </ImageView>
+
+    <ScrollView
+        android:id="@+id/scv_agency"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlt_title"
+        android:background="@color/colorbluebb"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="@dimen/_10sdp">
+
+            <!--Header Information-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_100sdp">
+
+                <ImageView
+                    android:id="@+id/imv_avarta_agency"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="@dimen/_100sdp"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:src="@mipmap/ic_launcher"
+                    android:scaleType="fitXY"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/imv_avarta_agency"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:orientation="vertical">
+
+                    <!--Address-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:orientation="horizontal">
+
+                        <com.product.nguyencongduc.uiticketlibrary.TextViewDefault
+                            android:id="@+id/tv_agency_address"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            style="@style/TextViewDefault"
+                            tools:text="agency direction"/>
+                    </LinearLayout>
+
+
+                    <!--Phone-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:orientation="horizontal">
+
+                        <com.product.nguyencongduc.uiticketlibrary.TextViewDefault
+                            android:id="@+id/tv_agency_phone"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            style="@style/TextViewDefault"
+                            tools:text="01289814685"/>
+                    </LinearLayout>
+
+                    <!--Email-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:layout_marginBottom="@dimen/_3sdp"
+                        android:orientation="horizontal">
+
+                        <com.product.nguyencongduc.uiticketlibrary.TextViewDefault
+                            android:id="@+id/tv_agency_email"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:singleLine="true"
+                            android:ellipsize="marquee"
+                            android:fadingEdge="horizontal"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:scrollHorizontally="true"
+                            style="@style/TextViewDefault"
+                            tools:text="kevin30591@gmail.com"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+            <!--End of Header-->
+            <!--Description-->
+            <com.product.nguyencongduc.uiticketlibrary.TextViewDefault
+                android:id="@+id/tv_agency_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
+                style="@style/TextViewDefault"
+                tools:text="Desciption"/>
+            <!--Book ticket-->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorOrangeAccent3">
+
+                <com.product.nguyencongduc.uiticketlibrary.TextViewDefault
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:text="@string/agency_detail_text_view_book_ticket"
+                    android:textColor="@color/colorBlueLight5"
+                    android:textSize="@dimen/_20ssp"
+                    style="@style/TextViewTitle"/>
+            </RelativeLayout>
+
+            <!--Calendar-->
+            <LinearLayout
+                android:id=""
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.product.nguyencongduc.uiticketlibrary.EditTextDefault
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:hint="CLICK SELECT DATE"
+                    android:layout_margin="@dimen/_5sdp"
+                    style="@style/TextViewTitle" />
+
+                <ImageView
+                    android:src="@drawable/ic_calendar"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_margin="@dimen/_5sdp"/>
+
+            </LinearLayout>
+
+            <!--End Book ticket-->
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/rlt_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_150sdp"
+        android:background="@color/colorPrimary"
+        >
+
+        <ImageView
+            android:id="@+id/imv_header_avatar"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/ic_launcher"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:scaleType="fitXY"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"/>
+
+        <com.product.nguyencongduc.uiticketlibrary.TextViewDefault
+            android:id="@+id/tv_agency_name"
+            style="@style/TextViewTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/imv_header_avatar"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:layout_centerInParent="true"
+            android:alpha="1"
+            android:textSize="@dimen/_25ssp"
+            tools:text="Agency name"/>
+
+        <com.product.nguyencongduc.uiticketlibrary.TextViewDefault
+            android:id="@+id/tv_header_agency_name"
+            style="@style/TextViewTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/imv_header_avatar"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:layout_centerInParent="true"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/_25ssp"
+            tools:text="Agency name"/>
+    </RelativeLayout>
+
+</RelativeLayout>
+
