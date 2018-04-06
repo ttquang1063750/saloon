@@ -17,6 +17,7 @@ public final class LocalStorage {
     private static final String KEY_USER_NAME = "KEY_USER_NAME";
     private static final String KEY_PASSWORD = "KEY_PASSWORD";
     private static final String SAVE_LOGIN = "SAVE_LOGIN";
+    private static final String KEY_TOKEN = "KEY_TOKEN";
     private static LocalStorage sInstance;
     private final SharedPreferences mSharedPreferences;
     private final SharedPreferences.Editor mEditor;
@@ -35,15 +36,20 @@ public final class LocalStorage {
         return this;
     }
 
-    public LocalStorage setLoginSetting(boolean isSave, String userId, String pass) {
+    public LocalStorage setLoginSetting(boolean isSave, String userId, String token) {
         mEditor.putBoolean(SAVE_LOGIN,isSave);
         if (isSave) {
             mEditor.putString(KEY_USER_NAME,userId);
-            mEditor.putString(KEY_PASSWORD,pass);
+            mEditor.putString(KEY_TOKEN, token);
         } else {
             mEditor.putString(KEY_USER_NAME,"");
-            mEditor.putString(KEY_PASSWORD,"");
+            mEditor.putString(KEY_TOKEN, "");
         }
+        return this;
+    }
+
+    public LocalStorage resetToken() {
+        mEditor.putString(KEY_TOKEN, "");
         return this;
     }
 
@@ -57,6 +63,10 @@ public final class LocalStorage {
 
     public String getPassword(){
         return mSharedPreferences.getString(KEY_PASSWORD, "");
+    }
+
+    public String getKeyToken() {
+        return mSharedPreferences.getString(KEY_TOKEN, "");
     }
 
     public Long getUserId() {

@@ -6,7 +6,6 @@ import android.widget.ImageView;
 
 import com.product.nguyencongduc.bookticketapplication.DataBase.FeedModel;
 import com.product.nguyencongduc.bookticketapplication.R;
-import com.product.nguyencongduc.bookticketapplication.intereface.FeedHolderCallback;
 import com.product.nguyencongduc.uiticketlibrary.TextViewDefault;
 
 import butterknife.BindView;

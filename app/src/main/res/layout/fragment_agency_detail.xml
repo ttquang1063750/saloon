@@ -115,40 +115,33 @@
                 tools:text="Desciption"/>
             <!--Book ticket-->
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/colorOrangeAccent3">
-
-                <com.product.nguyencongduc.uiticketlibrary.TextViewDefault
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/_5sdp"
-                    android:text="@string/agency_detail_text_view_book_ticket"
-                    android:textColor="@color/colorBlueLight5"
-                    android:textSize="@dimen/_20ssp"
-                    style="@style/TextViewTitle"/>
-            </RelativeLayout>
-
             <!--Calendar-->
             <LinearLayout
-                android:id=""
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:orientation="horizontal">
 
-                <com.product.nguyencongduc.uiticketlibrary.EditTextDefault
+                <com.product.nguyencongduc.uiticketlibrary.ButtonDefault
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
-                    android:hint="CLICK SELECT DATE"
-                    android:layout_margin="@dimen/_5sdp"
+                    android:hint="View Ticket"
+                    android:text="@string/agency_detail_text_view_book_ticket"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
                     style="@style/TextViewTitle" />
 
-                <ImageView
+                <com.product.nguyencongduc.uiticketlibrary.ButtonDefault
                     android:src="@drawable/ic_calendar"
-                    android:layout_width="@dimen/_30sdp"
-                    android:layout_height="@dimen/_30sdp"
-                    android:layout_margin="@dimen/_5sdp"/>
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:hint="Add favorite"
+                    android:text="Add Favorite"
+                    style="@style/TextViewTitle"/>
 
             </LinearLayout>
 

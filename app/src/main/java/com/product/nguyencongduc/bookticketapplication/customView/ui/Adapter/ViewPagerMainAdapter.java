@@ -7,7 +7,6 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 import com.product.nguyencongduc.bookticketapplication.DataBase.AgencyModel;
 import com.product.nguyencongduc.bookticketapplication.fragments.AgencyDetailFragment;
 import com.product.nguyencongduc.bookticketapplication.fragments.BaseFragment;
-import com.product.nguyencongduc.bookticketapplication.fragments.FeedFragment;
 import com.product.nguyencongduc.bookticketapplication.intereface.onFragmentCallback;
 
 import java.util.List;

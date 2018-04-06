@@ -4,11 +4,16 @@
     <!--LOGIN PAGE-->
     <string name="login_text_view_user_id">User ID: </string>
     <string name="login_text_view_password">Password: </string>
-    <string name="login_text_view_storage_data">Save user info for next login</string>
+    <string name="login_text_view_storage_data">Keep login for nexttime</string>
 
     <!--Agency Detail-->
     <string name="agency_detail_text_view_book_ticket">BOOK TICKET</string>
     <string name="agency_detail_text_view_view_all_ticket">View All</string>
+    <string name="agency_detail_button_book_ticket">Book Ticket</string>
+    <string name="agency_detail_button_add_favorite">Add favorite</string>
+
+    <!--Menu Fragment-->
+    <string name="menu_fragment_text_view_sign_out"> SIGN OUT </string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

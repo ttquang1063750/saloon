@@ -1,0 +1,47 @@
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorBlackBorder"
+    tools:context="com.product.nguyencongduc.bookticketapplication.fragments.MenuFragment">
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@color/colorBgDrakula"
+        android:layout_alignParentRight="true"
+        android:padding="@dimen/_10sdp"
+        app:layout_widthPercent="67.5%">
+
+        <com.product.nguyencongduc.uiticketlibrary.TextViewDefault
+            android:id="@+id/tv_feed_page"
+            style="@style/TextViewDefault"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:text="Feed Page (on build)" />
+
+        <com.product.nguyencongduc.uiticketlibrary.TextViewDefault
+            android:id="@+id/tv_favorite_agency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_feed_page"
+            style="@style/TextViewDefault"
+            android:text="Favorite Agency (on build)"/>
+
+
+        <!-- TODO: Update blank fragment layout -->
+        <com.product.nguyencongduc.uiticketlibrary.ButtonDefault
+            android:id="@+id/btn_sign_out"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="wrap_content"
+            android:text="@string/menu_fragment_text_view_sign_out"
+            android:layout_centerInParent="true"
+            style="@style/ButtonDefault"/>
+
+    </android.support.percent.PercentRelativeLayout>
+
+</android.support.percent.PercentRelativeLayout>

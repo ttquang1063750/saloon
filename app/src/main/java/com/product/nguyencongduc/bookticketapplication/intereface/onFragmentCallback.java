@@ -6,4 +6,6 @@ package com.product.nguyencongduc.bookticketapplication.intereface;
 
 public interface onFragmentCallback {
     void onFgCallback(Object object, int fromPage, int toPage);
+    void onMenuCallback(int action);
+    void onHeaderCalback(int action);
 }

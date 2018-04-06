@@ -21,21 +21,21 @@ public class LoginActivity extends BaseActivity {
     private LocalStorage mLocalStorage;
 
     @BindView(R.id.btn_login)
-    protected ButtonDefault btnLogin;
+    protected ButtonDefault mBtnLogin;
 
     @BindView(R.id.edt_id)
-    protected EditTextDefault edtId;
+    protected EditTextDefault mEdtId;
 
     @BindView(R.id.edt_password)
-    protected EditTextDefault edtPassword;
+    protected EditTextDefault mEdtPassword;
 
     @BindView(R.id.cb_storage_user)
     protected CheckBox mCheckBox;
 
     @OnClick(R.id.btn_login)
     protected void onBtnLoginAction() {
-        mLocalStorage.setLoginSetting(mCheckBox.isChecked(), edtId.getText().toString(),  edtPassword.getText().toString()).commit();
-        mActivityManager.getMainPageActivity().build().start();
+        mLocalStorage.setLoginSetting(mCheckBox.isChecked(), mEdtId.getText().toString(), "token").commit();
+        mActivityManager.getMainPageActivity().keepParentActivity(false).build().start();
     }
 
     @Override
@@ -46,22 +46,25 @@ public class LoginActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        mActivityManager = new ActivityManager(this);
         setDefaultData();
         onValidate();
-        mActivityManager = new ActivityManager(this);
     }
 
     private void setDefaultData() {
         mLocalStorage = new LocalStorage(this );
         mCheckBox.setChecked(mLocalStorage.getIsSaveLogin());
         if (mLocalStorage.getIsSaveLogin()) {
-            this.edtId.setText(mLocalStorage.getUserName());
-            this.edtPassword.setText(mLocalStorage.getPassword());
+            if (mLocalStorage.getKeyToken().toString().equals("")) {
+                this.mEdtId.setText(mLocalStorage.getUserName());
+            } else {
+                mActivityManager.getMainPageActivity().keepParentActivity(false).build().start();
+            }
         }
     }
 
     private void onValidate() {
-        btnLogin.setEnabled(!edtId.getText().toString().equals("") && !edtPassword.getText().toString().equals(""));
+        mBtnLogin.setEnabled(!mEdtId.getText().toString().equals("") && !mEdtPassword.getText().toString().equals(""));
         TextWatcher textWatcher = new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -75,10 +78,10 @@ public class LoginActivity extends BaseActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
-                btnLogin.setEnabled(!edtId.getText().toString().equals("") && !edtPassword.getText().toString().equals(""));
+                mBtnLogin.setEnabled(!mEdtId.getText().toString().equals("") && !mEdtPassword.getText().toString().equals(""));
             }
         };
-        edtId.addTextChangedListener(textWatcher);
-        edtPassword.addTextChangedListener(textWatcher);
+        mEdtId.addTextChangedListener(textWatcher);
+        mEdtPassword.addTextChangedListener(textWatcher);
     }
 }

@@ -11,5 +11,19 @@
     <color name="colorbluebb">#bbdefb</color>
     <color name="colorBlueLight5">#e3f2fd</color>
     <color name="colorOrangeAccent3">#ff3d00</color>
-
+    <color name="colorBgDrakula">#3C3F41 </color>
+    <color name="colorBlackText">#000000</color>
+    <color name="colorDefaultText">#BBBBB0</color>
+    <color name="backgroundDrakula">#3C3F41</color>
+    <color name="backgroundButton">#606567</color>
+    <color name="colorTextButton">#BBC7C7</color>
+    <color name="colorBackgroundButtonChangeWorkJapanLogin">#354F76</color>
+    <color name="colorBackgroundButtonChangeCompany">#D47C3A</color>
+    <color name="colorBackgroundLoginWJ">#E3F2FD</color>
+    <color name="colorBackgroundLoginCompany">#F5E3D6</color>
+    <color name="colorDrakulaContent">#2F2F2F</color>
+    <color name="transparentColor">#FFFFFFFF</color>
+    <color name="colorRed">#ab1d23</color>
+    <color name="colorDrakulaCompanyContent">#2F2F2F00</color>
+    <color name="colorBackgroundListEvent">#e9eaed</color>
 </resources>
